@@ -21,20 +21,27 @@ Then open a ticket with us requesting to be granted access to the Intel Xeon Phi
 
 http://www.accre.vanderbilt.edu/?page_id=369
 
-When inside a directory with a ```Makefile```, simply type:
+Once you are logged into a Phi node, move to the appropriate file containing a
+```Makefile```, and type:
 
 ```shell
 . /usr/local/intel/ClusterStudioXE_2013/composer_xe_2013_sp1/bin/compilervars.sh intel64
 make
 ```
 
+The first command loads the Intel compiler software into your environment, while the
+second command will run the commands to build the executable.
+
 ## Cluster Policies
 Until usage on the Phi nodes gets high enough, a single job will be allocated an entire node,
 which consists of:
 
-- 2 Intel Xeon Phi Co-Processors
-- 1 Intel Xeon E5-2670 CPU (8 cores, 16 hardware threads, 2.60 GHz)
-- 128 GB RAM
+- 2 Intel Xeon Phi Co-Processors (61 cores, 4 hardware threads/core, 1.3 GHz)
+- 1 Intel Xeon E5-2670 CPU (8 cores, 2 hardware threads/core, 2.60 GHz)
+- 132 GB system RAM
+- 15.8 GB RAM per Phi card
 
-By default a job will have access to both Phis, all 8 CPU cores, and 16 GB RAM. To request more
-memory simply add a ```#SBATCH --mem=``` directive to your SLURM script.
+By default a job will have access to both Phis (and all on-board memory), 
+all 8 CPU cores, and 16 GB RAM. To request more system memory simply add a 
+```#SBATCH --mem=``` directive to your SLURM script. Some memory is reserved 
+for the OS and filesystem so you cannot request any more than 123 GB.

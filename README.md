@@ -27,3 +27,14 @@ When inside a directory with a ```Makefile```, simply type:
 . /usr/local/intel/ClusterStudioXE_2013/composer_xe_2013_sp1/bin/compilervars.sh intel64
 make
 ```
+
+## Cluster Policies
+Until usage on the Phi nodes gets high enough, a single job will be allocated an entire node,
+which consists of:
+
+- 2 Intel Xeon Phi Co-Processors
+- 1 Intel Xeon E5-2670 CPU (8 cores, 16 hardware threads, 2.60 GHz)
+- 128 GB RAM
+
+By default a job will have access to both Phis, all 8 CPU cores, and 16 GB RAM. To request more
+memory simply add a ```#SBATCH --mem=``` directive to your SLURM script.

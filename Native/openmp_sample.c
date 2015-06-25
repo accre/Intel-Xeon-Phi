@@ -74,7 +74,7 @@
 // Matrix size constants
 // Be careful to set your shell's stacksize limit to a high value if you
 // wish to increase the SIZE.
-#define SIZE     4800     // Must be a multiple of 8.
+#define SIZE     48000     // Must be a multiple of 8.
 #define M        SIZE/8
 #define N        SIZE/4
 #define P        SIZE/2

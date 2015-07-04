@@ -39,6 +39,19 @@ Now submit SLURM job:
 sbatch --partition=mic native-mic.slurm
 ```
 
+### Controlling thread execution
+
+You can control how many OpenMP threads will be executed on the MIC
+card with the MIC_OMP_NUM_THREADS environment variable. For example:
+
+```shell
+export MIC_OMP_NUM_THREADS=120
+```
+
+By default, the program will max out all available hardware threads
+on the MIC card, which for the cards on ACCRE is 244 (61 cores * 
+4 hw threads per core).
+
 ## Setting up key pairs
 
 The MIC cards run their own micro Linux operating system. You can

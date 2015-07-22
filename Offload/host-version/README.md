@@ -1,4 +1,4 @@
-# Offload Example
+# Host Reduction Example
 
 In this simple example a parallel reduction is performed
 on the host (CPU). 

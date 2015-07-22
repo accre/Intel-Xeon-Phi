@@ -7,8 +7,9 @@
 #SBATCH --mem=64G
 #SBATCH --output=mic-test.out
 
-# load Intel environment
+# load Intel environment and build executable
 . /usr/local/intel/ClusterStudioXE_2013/composer_xe_2013_sp1/bin/compilervars.sh intel64
+make
 
 # This next line will control the number of OpenMP
 # threads that are executed on the MIC. By default the 

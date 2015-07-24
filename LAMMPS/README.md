@@ -1,6 +1,6 @@
 # LAMMPS on the Intel Xeon Phi
 
-LAMMPS has incorporated support for Symmetric/heterogenous host-phi computing, 
+LAMMPS (http://lammps.sandia.gov/) has incorporated support for Symmetric/heterogenous host-phi computing, 
 i.e. MPI processes and OpenMP threads are run on both the host and mic simultaneously. 
 LAMMPS also allows you to run across multiple MIC cards at once.
 

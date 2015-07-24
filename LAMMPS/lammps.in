@@ -1,0 +1,54 @@
+# LAMMPS Input file for simulating pure propane with OPLS-AA forcefield
+
+# Launch this script with srun -n X lmp_intel_phi -in lammps.in
+# where X is the number MPI processes
+
+###########################################
+# Control thread-level execution here
+# Specify the number of OpenMP threads 
+# to execute on the host per MPI task
+package          omp 4
+# Specify the number of MIC cards after the 
+# "intel" keyword (max is 2 on ACCRE) and 
+# threads per MIC core (tpc)
+package          intel 2 tpc 2
+###########################################
+
+units            metal
+atom_style       full
+
+kspace_style     pppm 1.0e-3
+pair_style       lj/cut/coul/long/intel 15.0
+bond_style       harmonic
+angle_style      harmonic
+dihedral_style   opls
+
+read_data        propane.data
+
+# Force field parameters -- taken from OPLS-AA
+pair_coeff       1 2 4.6135E-04 2.958
+pair_coeff       1 1 6.8426E-04 3.500
+pair_coeff       2 2 3.1106E-04 2.500
+
+bond_coeff       1 3.2129 1.526
+bond_coeff       2 3.4306 1.090
+
+angle_coeff      1 0.4148 109.50
+angle_coeff      2 0.3627 109.50
+angle_coeff      3 0.3627 109.50
+
+dihedral_coeff   1 0 0 3.296E-03 0
+dihedral_coeff   2 0 0 3.793E-03 0
+
+velocity         all create 200 1335 dist gaussian
+
+neighbor         3.0 bin
+neigh_modify     check yes
+
+timestep         0.002
+
+fix              1 all nvt temp 200 200 0.2
+dump             2 all xyz 5000 Compress.xyz
+
+thermo           100
+run              5000

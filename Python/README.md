@@ -17,6 +17,10 @@ long the operations took, etc, you can include an additional environment variabl
 export OFFLOAD_REPORT=2
 ```
 
+More details about automatic offloading can be found on this page:
+
+https://software.intel.com/sites/default/files/11MIC42_How_to_Use_MKL_Automatic_Offload_0.pdf
+
 ## Benchmark Results
 
 All examples run on 20000 x 20000 matrices

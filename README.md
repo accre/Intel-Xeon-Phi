@@ -5,7 +5,7 @@ can be used to improve the performance of compute-intensive applications. It can
 with a CPU (aka, host) to reduce execution time of programs containing support for multi-threaded and/or
 multi-process applications. 
 
-ACCRE currently has four nodes Phi nodes in production. Each node contains two Phi co-processors. 
+ACCRE currently has four Phi nodes in production. Each node contains two Phi co-processors. 
 
 This repo contains examples and instructions for running programs on the ACCRE cluster using Intel Xeon Phis.
 

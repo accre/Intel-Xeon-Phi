@@ -23,7 +23,7 @@ https://software.intel.com/sites/default/files/11MIC42_How_to_Use_MKL_Automatic_
 
 ## Benchmark Results
 
-All examples run on 20000 x 20000 matrices
+All examples run on 20,000 x 20,000 matrices
 
 * SVD: Single Value Decomposition
 * INV: Matrix Inversion

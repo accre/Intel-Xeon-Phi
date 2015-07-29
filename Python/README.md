@@ -32,15 +32,13 @@ All examples run on 20000 x 20000 matrices
 Job Details  | SVD Runtime (sec) | INV Runtime (sec) | DOT Runtime (sec)
 ------------- | ------------- | -------------- | --------------
 GCC-compiled  | 28559 | 2234 | 3827
-Intel-compiled  |  25847 | 1123 | 1913
-Intel-compiled + Multithreading | 25798 | 1130 | 1911
+Intel-compiled (includes multithreading)  |  25847 | 1123 | 1913
 Intel Offload Default | 24584 | 297 | 314
 Intel Offload 120 threads | 24697 | 371 | 412
 
 Note that all but the Offload jobs are run on a normal Intel CPU processor (i.e. host). 
-Interestingly, multi-threading (16 hw threads) does not impact performance much compared
-to the normal single-threaded Intel-compiled version of Python/NumPy. That
-might be specific to these matrix operations.
+Note that the Intel-compiled version includes multi-threading as long as there are 
+multiple cores included in a job's allocation.
 
 Offloading improves performance slightly for the single value decomposition, but quite
 drastically for the matrix inversion and matrix dot product. In fact, the default offload

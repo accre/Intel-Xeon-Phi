@@ -30,8 +30,14 @@ https://software.intel.com/sites/default/files/11MIC42_How_to_Use_MKL_Automatic_
 
 Job Details  | MM Runtime (sec) | ChF Runtime (sec) | SVD Runtime (sec) | PCA Runtime (sec)
 ------------- | ------------- | -------------- | -------------- | --------------
-GCC-compiled  | | | |
+GCC-compiled  | 5622 | 2253 | 6900 | 13876
 Intel-compiled (includes multithreading) | 413 | 143 | 1325 | 1814
 Intel Offload | 405 | 87 | 1321 | 1663
 
-Note that all but the Offload jobs are run on a normal Intel CPU processor (i.e. host). 
+Note that all but the Offload jobs are run on a normal Intel CPU processor (i.e. host). The
+intel-compiled version of R runs substantially faster than the GCC version due to 
+various factors, namely that multi-threading is included in the Intel-compiled version. 
+This means that if multiple CPU cores are available in the allocation then multiple 
+threads of execution can be run in parallel for faster processing. Offloading to the Phi
+results in a noticeable performance gain for the Cholesky Factorization calculation. For the
+other three algorithms offloading helps only marginally.

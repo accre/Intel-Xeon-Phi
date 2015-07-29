@@ -11,7 +11,7 @@ This repo contains examples and instructions for running programs on the ACCRE c
 
 ## Available Software on ACCRE Cluster
 
-* Matlab (r2014b and later)
+* Matlab (r2014a and later)
 * R (3.2.0)
 * Python (2.7.8)
 * LAMMPS (mid-July 2015 version)

@@ -7,13 +7,14 @@ with a CPU (aka, host) to reduce execution time of certain programs, especially 
 
 * The biggest advantage of the Phis is the ability to achieve higher performance with minimal changes to your code. In particular,
 programs that perform large matrix and/or vector processing using Intel's MKL or multi-threading are execellent candidates for 
-Phi execution. Intel's "automatic offloading" technology is enabled for at least three widely used software environments (Matlab, 
-Python, and R), where a user only needs to add a single line to a SLURM script to achieve dynamic offloading to the Phi. No
+Phi execution. Intel's "automatic offloading" technology is enabled on the cluster for at least three widely used software environments (Matlab, 
+Python, and R), where a user only needs to add a few lines to a SLURM script to achieve dynamic offloading to the Phi. No
 re-building/compiling of the software is needed.
 
 * ACCRE currently has four Phi nodes in production. Each node contains two Phi co-processors. 
 
-* This repo contains examples and instructions for running programs on the ACCRE cluster using Intel Xeon Phis.
+* This repository contains examples and instructions for running programs on the ACCRE cluster using Intel Xeon Phis. Click
+on the directories above from Github to view these simple examples.
 
 ## Available Software on ACCRE Cluster
 
@@ -69,6 +70,7 @@ sbatch: error: Batch job submission failed: Invalid account or account/partition
 Then open a ticket with us (http://www.accre.vanderbilt.edu/?page_id=369) requesting to be granted access to the Intel Xeon Phi nodes.
 
 ## Cluster Policies
+ACCRE currently has four Phi nodes in production. Each node contains two Phi co-processors. 
 Until usage on the Phi nodes gets high enough, a single job will be allocated an entire node,
 which consists of:
 

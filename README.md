@@ -21,34 +21,21 @@ C programs demonstrating how to run programs either natively on a MIC card or by
 certain tasks from the host to a MIC card. These examples also contain Makefiles to
 aid in building the executables for these examples.
 
-## Building Examples
-To build an executable you must be logged into a node with an Intel Xeon Phi present.
-I recommend launching an interactive SLURM session via ```salloc```:
+## Getting Access
+
+Add the following line to your SLURM script to submit to the MIC queue:
 
 ```shell
-salloc --partition=mic --time=30:00
+#SBATCH --partition=mic
 ```
 
-where this will give you thirtly minutes of interactive access to a Intel Xeon Phi node. If you
-see a message like this one:
+If you get an error like this one:
 
 ```shell
-[jill@vmps13 ~]$ salloc --partition=mic --time=30:00
 sbatch: error: Batch job submission failed: Invalid account or account/partition combination specified
 ```
 
 Then open a ticket with us (http://www.accre.vanderbilt.edu/?page_id=369) requesting to be granted access to the Intel Xeon Phi nodes:
-
-Once you are logged into a Phi node, move to the appropriate file containing a
-```Makefile```, and type:
-
-```shell
-. /usr/local/intel/ClusterStudioXE_2013/composer_xe_2013_sp1/bin/compilervars.sh intel64
-make
-```
-
-The first command loads the Intel compiler software into your environment, while the
-second command will run the commands to build the executable.
 
 ## Cluster Policies
 Until usage on the Phi nodes gets high enough, a single job will be allocated an entire node,

@@ -17,15 +17,34 @@ re-building/compiling of the software is needed.
 
 ## Available Software on ACCRE Cluster
 
+The following software packages support automatic offloading to the Phi, whereby large matrix and vector operations
+can be dynamically offloaded to the Phi simply by adding a few lines of code to your SLURM script. LAMMPS does not
+technically support automatic offloading but it does include Phi support for certain algorithms. 
+
 * Matlab (r2014a and later)
+```shell
+setpkgs -a matlab
+```
+
 * R (3.2.0)
+```shell
+setpkgs -a R_3.2.0
+```
+
 * Python (2.7.8) / NumPy
+```shell
+setpkgs -a python2.7.8_intel14
+```
+
 * LAMMPS (mid-July 2015 version)
+```shell
+setpkgs -a lammps_mic
+```
 
 Examples for each of these are included in this repo. Each of these packages can take advantage of both Phis residing on ACCRE Phi
 nodes and will run programs across both the host (normal CPU) and the Phis simultaneously without much intervention from the user. 
 
-In addition to these "automatic offloading" examples, there are also a few C programs
+In addition to these automatic offloading examples, there are also a few C programs
 demonstrating how to run programs either natively on a MIC card or by offloading
 certain tasks from the host to a MIC card. These examples also contain Makefiles to
 aid in building the executables for these examples. See the directories labeled:

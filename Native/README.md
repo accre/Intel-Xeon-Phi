@@ -18,28 +18,7 @@ The -mmic switch in the Makefile is what tells the Intel compiler to create a
 native MIC executable. The convention is for native binaries
 to use the .mic extension. 
 
-## Building and running
-
-```shell
-cd Native
-salloc --partition=mic --time=30:00
-```
-
-Once you are logged into a Phi node:
-
-```shell
-. /usr/local/intel/ClusterStudioXE_2013/composer_xe_2013_sp1/bin/compilervars.sh intel64
-make
-exit
-```
-
-Now submit SLURM job:
-
-```shell
-sbatch --partition=mic native-mic.slurm
-```
-
-### Controlling thread execution
+## Controlling thread execution
 
 You can control how many OpenMP threads will be executed on the MIC
 card with the MIC_OMP_NUM_THREADS environment variable. For example:

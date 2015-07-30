@@ -11,8 +11,6 @@ Phi execution. Intel's "automatic offloading" technology is enabled on the clust
 Python, and R), where a user only needs to add a few lines to a SLURM script to achieve dynamic offloading to the Phi. No
 re-building/compiling of the software is needed.
 
-* ACCRE currently has four Phi nodes in production. Each node contains two Phi co-processors. 
-
 * This repository contains examples and instructions for running programs on the ACCRE cluster using Intel Xeon Phis. Click
 on the directories above from Github to view these simple examples.
 

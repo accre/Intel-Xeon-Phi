@@ -1,4 +1,4 @@
-# Intel-Xeon-Phi
+# Intel Xeon Phi Co-Processors on ACCRE
 
 * The Intel Xeon Phi co-processor (aka, Many Integrated Core, or MIC card) is a device that
 can be used to improve the performance of compute-intensive applications. It can work independently or in tandem
@@ -14,7 +14,7 @@ re-building/compiling of the software is needed.
 * This repository contains examples and instructions for running programs on the ACCRE cluster using Intel Xeon Phis. Click
 on the directories above from Github to view these simple examples.
 
-## Available Software on ACCRE Cluster
+## Available Phi-Supported Software on ACCRE Cluster
 
 The following software packages support automatic offloading to the Phi, whereby large matrix and vector operations
 can be dynamically offloaded to the Phi simply by adding a few lines of code to your SLURM script. LAMMPS does not

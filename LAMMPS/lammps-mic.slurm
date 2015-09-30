@@ -8,8 +8,7 @@
 #SBATCH --output=mic-lammps.out
 
 # load Intel environment
-. /usr/local/intel/ClusterStudioXE_2013/composer_xe_2013_sp1/bin/compilervars.sh intel64
-. /usr/local/intel/ClusterStudioXE_2013/impi/4.1.3.048/bin64/mpivars.sh
+setpkgs -a intel_cluster_studio_compiler
 
 # load Intel Xeon Phi version of LAMMPS
 setpkgs -a lammps_mic

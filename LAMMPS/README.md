@@ -12,8 +12,7 @@ be found on the LAMMPS website: http://lammps.sandia.gov/doc/accelerate_intel.ht
 Type the following to set up your environment:
 
 ```shell
-. /usr/local/intel/ClusterStudioXE_2013/composer_xe_2013_sp1/bin/compilervars.sh intel64
-. /usr/local/intel/ClusterStudioXE_2013/impi/4.1.3.048/bin64/mpivars.sh
+setpkgs -a intel_cluster_studio_compiler
 ```
 
 And then use ```setpkgs -a``` to load the appropriate version of LAMMPS:

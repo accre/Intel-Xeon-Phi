@@ -8,7 +8,7 @@
 #SBATCH --output=mic-test.out
 
 # load Intel environment and build executable
-. /usr/local/intel/ClusterStudioXE_2013/composer_xe_2013_sp1/bin/compilervars.sh intel64
+setpkgs -a intel_cluster_studio_compiler
 make
 
 # This next line will control the number of OpenMP

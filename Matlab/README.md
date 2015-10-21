@@ -1,4 +1,4 @@
-# Automatic Offloading of R Matrix Operations
+# Automatic Offloading of Matlab Matrix Operations
 
 For programs that are linked to the Intel MKL (Math Kernel Library), computationally
 intensive operations (e.g. matrix-matrix multiplies) can be automatically offloaded to

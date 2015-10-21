@@ -9,7 +9,7 @@
 
 # load R and Intel environment
 setpkgs -a R_3.2.0
-. /usr/local/intel/ClusterStudioXE_2013/composer_xe_2013_sp1/bin/compilervars.sh intel64
+setpkgs -a intel_cluster_studio_compiler
 
 # This single line allows MKL to decide whether to offload
 # certain matrix operations to one or both MICs

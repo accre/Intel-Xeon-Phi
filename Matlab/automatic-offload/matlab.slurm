@@ -9,7 +9,7 @@
 
 # load Matlab and Intel environment
 setpkgs -a matlab
-. /usr/local/intel/ClusterStudioXE_2013/composer_xe_2013_sp1/bin/compilervars.sh intel64
+setpkgs -a intel_cluster_studio_compiler
 export BLAS_VERSION=/usr/local/intel/ClusterStudioXE_2013/composer_xe_2013_sp1.2.144/mkl/lib/intel64/libmkl_rt.so
 export LAPACK_VERSION=/usr/local/intel/ClusterStudioXE_2013/composer_xe_2013_sp1.2.144/mkl/lib/intel64/libmkl_rt.so
 export MKL_MIC_MAX_MEMORY=16G

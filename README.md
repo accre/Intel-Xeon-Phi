@@ -72,8 +72,8 @@ ACCRE currently has four Phi nodes in production. Each node contains two Phi co-
 Until usage on the Phi nodes gets high enough, a single job will be allocated an entire node,
 which consists of:
 
-- 2 Intel Xeon Phi Co-Processors (each with 61 cores, 4 hardware threads/core, 1.3 GHz)
-- 2 Intel Xeon E5-2670 CPUs (each with 4 cores, 2 hardware threads/core, 2.60 GHz)
+- 2 Intel Xeon Phi Co-Processors (each with 61 cores, 4 hardware threads/core, 1.24 GHz)
+- 2 Intel Xeon E5-2670 CPUs (each with 8 cores, 2 hardware threads/core, 2.60 GHz)
 - 132 GB system RAM
 - 15.8 GB RAM per Phi card
 

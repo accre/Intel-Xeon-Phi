@@ -8,7 +8,9 @@
 #include <omp.h>
 
 int main(){
-double sum; int i,n, nt;
+
+   double sum; 
+   int i,n,nt;
 
    n=2000000000;
    sum=0.0e0;
@@ -19,12 +21,7 @@ double sum; int i,n, nt;
     for(i=1;i<=n;i++){
        sum = sum + i;
     }
-    //nt = omp_get_max_threads();
-    #pragma omp parallel
-    {
-       #pragma omp single
-       nt = omp_get_num_threads();
-    }
+    nt = omp_get_max_threads();
 
     #ifdef __MIC__
        printf("Hello MIC reduction %f threads: %d\n",sum,nt);

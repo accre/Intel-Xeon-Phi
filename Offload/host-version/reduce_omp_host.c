@@ -8,7 +8,9 @@
 #include <omp.h>
 
 int main(){
-double sum; int i,n, nt;
+
+   double sum; 
+   int i,n,nt;
 
    n=2000000000;
    sum=0.0e0;

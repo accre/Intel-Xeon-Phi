@@ -14,6 +14,8 @@ re-building/compiling of the software is needed.
 * This repository contains examples and instructions for running programs on the ACCRE cluster using Intel Xeon Phis. Click
 on the directories above from Github to view these simple examples.
 
+* If you are a Vanderbilt University researcher, you can register for a Intel Xeon Phi training course here: http://www.accre.vanderbilt.edu/?page_id=3019
+
 ## Available Phi-Supported Software on ACCRE Cluster
 
 The following software packages support automatic offloading to the Phi, whereby large matrix and vector operations
@@ -25,8 +27,9 @@ technically support automatic offloading but it does include Phi support for cer
 setpkgs -a matlab
 ```
 
-* R (3.2.0)
+* R (3.1.1 and 3.2.0)
 ```shell
+setpkgs -a R_3.1.1_intel
 setpkgs -a R_3.2.0
 ```
 
@@ -44,7 +47,7 @@ Examples for each of these are included in this repo. Each of these packages can
 nodes and will run programs across both the host (normal CPU) and the Phis simultaneously without much intervention from the user. 
 
 In addition to these automatic offloading examples, there are also a few C programs
-demonstrating how to run programs either natively on a MIC card or by offloading
+demonstrating how to run programs either natively on a MIC card or by explicitly offloading
 certain tasks from the host to a MIC card. These examples also contain Makefiles to
 aid in building the executables for these examples. See the directories labeled:
 

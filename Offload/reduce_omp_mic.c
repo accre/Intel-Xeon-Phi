@@ -17,16 +17,24 @@ int main(){
 
    #pragma offload target(mic:0)
    {
-    #pragma omp parallel for reduction(+:sum)
-    for(i=1;i<=n;i++){
-       sum = sum + i;
-    }
-    nt = omp_get_max_threads();
 
-    #ifdef __MIC__
-       printf("Hello MIC reduction %f threads: %d\n",sum,nt);
-    #else
-       printf("Hello CPU reduction %f threads: %d\n",sum,nt);
-    #endif
+      #pragma omp parallel 
+      {
+
+         #pragma omp for reduction(+:sum)
+         for(i=1;i<=n;i++){
+            sum = sum + i;
+         }
+
+         nt = omp_get_num_threads();
+
+      }
+
+      #ifdef __MIC__
+         printf("Hello MIC reduction %f threads: %d\n",sum,nt);
+      #else
+         printf("Hello CPU reduction %f threads: %d\n",sum,nt);
+      #endif
    }
+
 }

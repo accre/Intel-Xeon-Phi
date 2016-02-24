@@ -1,5 +1,5 @@
 CC=icc
-CFLAGS=-std=c99 -O3 -vec-report3 -openmp
+CFLAGS=-std=c99 -xHost -O3 -vec-report2 -openmp
 EXE=reduce_offload_mic
 
 $(EXE) : reduce_omp_mic.c
